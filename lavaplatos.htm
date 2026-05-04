@@ -12,6 +12,12 @@
         <a href="/" class="encabezado_enlace">SKORGE GAMES</a>
         <link rel="stylesheet" href="https://cdn-icons-png.flaticon.com/512/107/107831.png">
         <a href="#" id="cart-icon"><i class="fa-solid fa-cart-shopping">Ver carrito(<span id="cart-count">0</span>)</i></a>
+        <div id="carrito-container" style="display: none; border: 1px solid #080101; padding: 10px; position: absolute; background: rgb(248, 3, 3); z-index: 100;">
+    <h3>Tu Carrito</h3>
+    <ul id="lista-carrito"></ul>
+    <p>Total: $<span id="total-precio">0</span></p>
+</div>
+
         <button onclick="toggleTheme()" class="btn-theme">Cambiar Tema</button>
 
     </header>
@@ -780,5 +786,12 @@
     </footer>
 
     <script src="./carrito.js"></script>
+    <div id="fav-panel" class="side-panel">
+    <div class="panel-header">
+        <h2>Mis Favoritos</h2>
+        <button id="close-fav">×</button>
+    </div>
+    <ul id="lista-favoritos"></ul>
+</div>
 </body>
 </html>
