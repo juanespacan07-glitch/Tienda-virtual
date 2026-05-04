@@ -140,3 +140,12 @@ body { background-color: var(--bg-color); color: var(--text-color); transition: 
     padding: 8px;
     border-radius: 4px;
 }
+
+.juego-card img, .juego-card h3:first-of-type {
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.juego-card img:hover {
+    opacity: 0.8;
+}

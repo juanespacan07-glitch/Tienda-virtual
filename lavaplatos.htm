@@ -49,48 +49,64 @@
             <article class="juego-card">
                 <div class="product-button">
                 <img src="./caratula de juegos/gears of war 1.jpg" alt="Gears of War 1">
-                <h3>Gears of War 1</h3>
+                <h3 onclick="abrirDetalles(this)">Gears of War 1</h3>
                 <h3>$ 40.000</h3>
+                <p class="descripcion-oculta" style="display:none;">
+            Gears of War es un shooter táctico en tercera persona donde los humanos luchan por la supervivencia contra la horda Locust en el planeta Sera.
+            </p>
                 <a href="#" class="add-to-card">Agregar al carrito</a>
                 </div>
             </article>
             <article class="juego-card">
                 <div class="product-button">
                 <img src="./caratula de juegos/gears of war 2.jpg" alt="Gears of War 2">
-                <h3>Gears of War 2</h3>
+                <h3 onclick="abrirDetalles(this)">Gears of War 2</h3>
                 <h3>$ 50.000</h3>
+                <p class="descripcion-oculta" style="display:none;">
+                 Gears of war 2 secuela de la primera entrega y la continuacion de la guerra y la de nuestros personajes favoritos luchan contra nuevos enemigos.
+                </p>
                 <a href="#" class="add-to-card">Agregar al carrito</a>
                 </div>
             </article>
             <article class="juego-card">
                 <div class="product-button">
                 <img src="./caratula de juegos/gears of war 3.jpg" alt="Gears of War 3">
-                <h3>Gears of War 3</h3>
+                <h3 onclick="abrirDetalles(this)">Gears of War 3</h3>
                 <h3>$ 60.000</h3>
+                <p class="descripcion-oculta" style="display:none;">
+                Gears of war 3 el mejor de la saga que lucha en una pelea intentensa por la supervivencia de hambos mandos de quien vive y muere.
+                </p>
                 <a href="#" class="add-to-card">Agregar al carrito</a>
                 </div>
             </article>
             <article class="juego-card">
                 <div class="product-button">
                 <img src="./caratula de juegos/Halo 1.jpg" alt="Halo 1">
-                <h3>Halo 1</h3>
+                <h3 onclick="abrirDetalles(this)">Halo 1</h3>
                 <h3>$ 35.000</h3>
+                <p class="descripcion-oculta" style="display:none;">
+                Halo el inicio de una revolucion de Shooters en primera persona y una de las caras de xbox.
+                </p>
                 <a href="#" class="add-to-card">Agregar al carrito</a>
                 </div>
             </article>
             <article class="juego-card">
                 <div class="product-button">
                 <img src="./caratula de juegos/Halo 2.jpg" alt="Halo 2">
-                <h3>Halo 2</h3>
+                <h3 onclick="abrirDetalles(this)">Halo 2</h3>
                 <h3>$ 40.000</h3>
                 <a href="#" class="add-to-card">Agregar al carrito</a>
+                <p class="descripcion-oculta" style="display: none;">
+                Halo 2 uno de los videojuegos mas vendidos de la xbox Clasica y una secuela con momentos memorables y iconicos.
+                </p>
             </div>
             </article>
             <article class="juego-card">
                  <div class="product-button">
                 <img src="./caratula de juegos/Halo 3.jpg" alt="Halo 3">
-                <h3>Halo 3</h3>
+                <h3 onclick="abrirDetalles(this)">Halo 3</h3>
                 <h3>$ 45.000</h3>
+                <p class="descripcion-oculta" style="display:none;"></p>
                 <a href="#" class="add-to-card">Agregar al carrito</a>
             </div>
             </article>
@@ -811,6 +827,15 @@
             <button type="submit" style="background: #08e408; color: black; border: none; padding: 10px; width: 100%; cursor: pointer; font-weight: bold;">Confirmar Pedido</button>
             <button type="button" onclick="cerrarCheckout()" style="background: transparent; color: white; border: none; width: 100%; margin-top: 10px; cursor: pointer;">Cancelar</button>
         </form>
+    </div>
+</div>
+<div id="modal-descripcion" style="display: none; position: fixed; z-index: 3000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); justify-content: center; align-items: center;">
+    <div style="background: #1a1a1a; color: white; padding: 30px; border-radius: 10px; max-width: 500px; border: 2px solid #08e408; position: relative;">
+        <span onclick="cerrarDetalles()" style="position: absolute; top: 10px; right: 15px; cursor: pointer; color: #08e408; font-size: 24px;">&times;</span>
+        <h2 id="detalles-titulo" style="color: #08e408;"></h2>
+        <img id="detalles-img" src="" style="width: 100%; border-radius: 5px; margin-bottom: 15px;">
+        <p id="detalles-texto"></p>
+        <button onclick="cerrarDetalles()" style="background: #08e408; color: black; border: none; padding: 10px 20px; width: 100%; cursor: pointer; font-weight: bold; margin-top: 10px;">Cerrar</button>
     </div>
 </div>
 </body>

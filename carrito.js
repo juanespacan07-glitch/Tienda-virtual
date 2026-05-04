@@ -102,5 +102,29 @@ window.quitar = function(id) {
     renderizarCarrito();
 };
 
+function abrirDetalles(elemento) {
+    const card = elemento.closest('.juego-card');
+    
+    const titulo = card.querySelector('h3:nth-of-type(1)').innerText;
+    const imagenSrc = card.querySelector('img').src;
+    const descripcion = card.querySelector('.descripcion-oculta').innerText;
 
+  
+    document.getElementById('detalles-titulo').innerText = titulo;
+    document.getElementById('detalles-img').src = imagenSrc;
+    document.getElementById('detalles-texto').innerText = descripcion;
+
+    document.getElementById('modal-descripcion').style.display = 'flex';
+}
+
+function cerrarDetalles() {
+    document.getElementById('modal-descripcion').style.display = 'none';
+}
+
+window.onclick = function(event) {
+    const modal = document.getElementById('modal-descripcion');
+    if (event.target == modal) {
+        cerrarDetalles();
+    }
+}
 
